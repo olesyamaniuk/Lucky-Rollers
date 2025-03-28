@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const menuBtnRef = document.querySelector("[data-menu-button]");
-  const navListRef = document.querySelector(".class-navigation-list");
-  const headerRef = document.querySelector(".class-header");
-  const navigationRef = document.querySelector(".class-navigation");
+  const navListRef = document.querySelector(".lucky-navigation-list");
+  const headerRef = document.querySelector(".lucky-header");
+  const navigationRef = document.querySelector(".lucky-navigation");
 
   menuBtnRef.addEventListener("click", () => {
     menuBtnRef.classList.toggle("is-open");
@@ -22,15 +22,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function toggleAnswer(element) {
+  const faqItem = element.closest(".lucky-faq-item");
   const answer = element.nextElementSibling;
-  const buttonImg = element.querySelector(".class-toggle-button img");
+  const buttonImg = element.querySelector(".lucky-toggle-button img");
 
   if (answer.style.display === "none" || answer.style.display === "") {
     answer.style.display = "block";
-    buttonImg.src = "/img/faq/arrow.png";
+    buttonImg.src = "/img/Arrow - Down 3.png";
+    faqItem.classList.add("lucky-active");
   } else {
     answer.style.display = "none";
-    buttonImg.src = "/img/faq/icon.png";
+    buttonImg.src = "/img/Arrow - Down 2.png";
+    faqItem.classList.remove("lucky-active");
   }
 }
 

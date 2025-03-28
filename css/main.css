@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Comme:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Viga&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   -webkit-box-sizing: border-box;
@@ -7,8 +7,9 @@
 
 html {
   scroll-behavior: smooth;
-  background: #ffbb5b;
-  color: #000000;
+  background: rgba(15, 15, 15, 1);
+
+  color: rgba(244, 244, 244, 1);
 }
 
 body {
@@ -50,17 +51,17 @@ a {
   scale: 120%;
 }
 
-.class-header.is-open .class-header-background {
+.lucky-header.is-open .lucky-header-background {
   left: 0;
 }
-.class-header-button-wrapper {
+.lucky-header-button-wrapper {
   margin-left: auto;
 }
-.class-header-icon {
+.lucky-header-icon {
   display: none;
 }
 
-.class-header-icon-button {
+.lucky-header-icon-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,34 +69,35 @@ a {
   border: none;
   border-radius: 50%;
 }
-.class-navigation-list.is-open {
+.lucky-navigation-list.is-open {
   right: 0;
 }
-.class-header-icon-menu {
+.lucky-header-icon-menu {
   display: block;
 }
 
-.class-header-icon-button.is-open .class-header-icon-menu {
+.lucky-header-icon-button.is-open .lucky-header-icon-menu {
   display: none;
 }
 
-.class-header-icon-button.is-open .class-header-icon-close {
+.lucky-header-icon-button.is-open .lucky-header-icon-close {
   display: block;
 }
 
-.class-header {
+.lucky-header {
   position: fixed;
   width: 100%;
   z-index: 5;
   transition: background-color 0.3s ease;
   background: transparent;
   display: flex;
-  height: 64px;
-  background: #297d17;
-  box-shadow: 4px 7px 9px 0px #00000040;
+  height: 56px;
+  background: rgba(15, 15, 15, 1);
+
+  border-bottom: 2px solid rgba(204, 215, 245, 1);
 }
 
-.class-header-background {
+.lucky-header-background {
   position: absolute;
   top: 0;
   right: 0;
@@ -103,32 +105,31 @@ a {
   left: 100%;
   z-index: -1;
   transition: left 0.3s ease;
-  background: #297d17;
-  box-shadow: 4px 7px 9px 0px #00000040;
+  background: rgba(5, 6, 6, 1);
 }
-.class-header.is-open .class-header-background {
+.lucky-header.is-open .lucky-header-background {
   left: 0;
 }
-.class-header-button-wrapper {
+.lucky-header-button-wrapper {
   margin-right: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.class-header-icon-menu {
+.lucky-header-icon-menu {
   display: block;
 }
 
-.class-header-icon-button.is-open .class-header-icon-menu {
+.lucky-header-icon-button.is-open .lucky-header-icon-menu {
   display: none;
 }
 
-.class-header-icon-button.is-open .class-header-icon-close {
+.lucky-header-icon-button.is-open .lucky-header-icon-close {
   display: block;
 }
 
-.class-navigation {
+.lucky-navigation {
   display: -ms-flexbox;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -144,7 +145,7 @@ a {
   position: relative;
 }
 
-.class-navigation-list {
+.lucky-navigation-list {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -158,43 +159,52 @@ a {
   padding: 0px 32px;
   border-radius: 0px 0px 20px 20px;
   gap: 28px;
-  background: #ffc16b;
+  background: rgba(5, 6, 6, 1);
 }
 
-.class-navigation-list.is-open {
+.lucky-navigation-list.is-open {
   right: 0;
 }
 
-.class-navigation-link {
+.lucky-navigation-link {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+
   transition: all 0.3s ease-in-out;
   text-decoration: none;
-  color: #482600;
+  color: rgba(244, 244, 244, 1);
 }
 
-.class-navigation-link:hover,
-.class-navigatioт-link:focus {
-  color: #297d17;
+.lucky-navigation-link:hover,
+.lucky-navigatioт-link:focus {
+  color: rgba(5, 254, 198, 1);
 }
 
-.class-header.is-open {
+.lucky-header.is-open {
   background-color: transparent;
 }
 
-.class-navigation-img {
+.lucky-navigation-img {
   display: none;
 }
 
 @media screen and (min-width: 1200px) {
-  .class-navigation-img {
+  .lucky-navigation-img {
     display: flex;
+    margin-right: 60px;
   }
-  .class-policy-terms-header-icon-menu {
+  .lucky-policy-terms-header-icon-menu {
     display: none;
   }
 
-  .class-header {
+  .lucky-header {
     width: 100%;
-    height: 70px;
+    height: 80px;
     padding: 10px 0px 10px 20px;
     display: flex;
     align-items: center;
@@ -202,12 +212,12 @@ a {
     z-index: 1000;
   }
 
-  .class-header-background {
+  .lucky-header-background {
   }
-  .class-header-icon-button {
+  .lucky-header-icon-button {
     display: none;
   }
-  .class-navigation {
+  .lucky-navigation {
     display: flex;
     flex-direction: row;
     flex: 1;
@@ -216,7 +226,7 @@ a {
     margin: auto;
   }
 
-  .class-navigation-list {
+  .lucky-navigation-list {
     background-color: transparent;
     flex-direction: row;
     display: flex;
@@ -225,7 +235,7 @@ a {
     margin: auto;
     padding-block: 0;
     flex: 1;
-    gap: 13px;
+    gap: 20px;
     height: 0px;
     display: flex;
     justify-content: center;
@@ -233,623 +243,984 @@ a {
     justify-content: center;
   }
 
-  .class-navigation-link {
-    color: #fae599;
-    padding: 0px 24px;
+  .lucky-navigation-link {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+
     text-decoration: none;
+    padding: 0 20px;
   }
 
-  .class-navigation-link:hover,
-  .class-navigation-link:focus {
-    color: #ffffff;
-  }
-
-  .class-navigation-item-desk {
+  .lucky-navigation-item-desk {
     display: none;
   }
 }
-.class-home {
+.lucky-home {
   width: 375px;
-  height: 742px;
-  padding: 182px 16px 0px;
+  height: 835px;
+  padding: 157px 20px 0px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: url("/img/home/Home.png");
+  background-image: url("/img/home/Hero.png");
   margin: auto;
 }
 
-.class-home-container-top {
+.lucky-home-container-top {
   display: flex;
   flex-direction: column;
   align-items: start;
 }
 
-.class-home-title {
-  -webkit-text-stroke: 1px #ffffff;
-  color: #482600;
+.lucky-home-title {
+  font-family: IBM Plex Sans;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+.lucky-home-title-two {
+  font-family: IBM Plex Sans;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+.lucky-home-text {
+  font-family: IBM Plex Sans;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  padding: 36px 0 8px;
+}
+.lucky-home-text-two {
+  font-family: IBM Plex Sans;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  padding-bottom: 36px;
+}
+.lucky-home-google-button-image {
+  width: 142px;
+  height: 56px;
 }
 
-.class-home-text {
-}
-
-.class-home-google-buttonimage {
-  width: 200px;
-  height: 60px;
-}
-
-.class-home-google-button-link:hover .class-home-google-button-image {
-  /* content: url("/img/home"); */
+.lucky-home-google-button-link:hover .lucky-home-google-button-image {
   transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
 }
 
 @media screen and (min-width: 1200px) {
-  .class-home {
+  .lucky-home {
     width: 1440px;
-    height: 784px;
-    padding: 204px 0px 0px;
-    background-image: url("/img/home/Home\ \(1\).png");
+    height: 990px;
+    padding: 235px 72px 0px 614px;
+    background-image: url("/img/home/Hero\ \(1\).png");
   }
 
-  .class-home-container-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .lucky-home-title {
+    font-family: IBM Plex Sans;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
   }
-
-  .class-home-title {
+  .lucky-home-title-two {
+    font-family: IBM Plex Sans;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
   }
+  .lucky-home-text {
+    font-family: IBM Plex Sans;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
 
-  .class-home-text {
+    padding: 56px 0 16px;
+  }
+  .lucky-home-text-two {
+    font-family: IBM Plex Sans;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+    padding-bottom: 48px;
   }
 }
-.class-why {
+.lucky-why {
   width: 375px;
-  height: 1085px;
+  height: 986px;
   margin: auto;
-  padding: 77px 15px 0;
+  padding: 32px 20px 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: url("/img");
+  background-image: url("/img/join/1.png");
 }
-
-.class-why-list {
-  padding-top: px;
+.lucky-why-title-div {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: IBM Plex Sans;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: bottom;
+  color: rgba(5, 254, 198, 1);
+  align-items: center;
+  flex-direction: column;
+}
+.lucky-why-title {
+  font-family: IBM Plex Sans;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: bottom;
+  display: flex;
+  gap: 14px;
+}
+.lucky-why-title-div img {
+  width: 48px;
+  height: 48px;
+}
+.lucky-why-text-bold {
+  font-family: IBM Plex Sans;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  padding: 40px 0;
+}
+.lucky-why-list {
   display: flex;
   flex-direction: column;
-  gap: px;
+  gap: 16px;
 }
 
-.class-why-item {
+.lucky-why-item {
   display: flex;
   gap: 16px;
   align-items: center;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  vertical-align: middle;
 }
 
-.class-why-text-bold {
-}
-
-.class-why-text {
+.lucky-why-text {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  padding-top: 20px;
 }
 
 @media screen and (min-width: 1200px) {
-  .class-why {
+  .lucky-why {
     width: 1440px;
-    height: 700px;
-    padding: 91px 189px 0;
-    background-image: url("/img");
+    height: 804px;
+    padding: 90px 72px 0 620px;
+    background-image: url("/img/join/11.png");
+  }
+  .lucky-why-title-div {
+    font-family: IBM Plex Sans;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+    vertical-align: bottom;
+    text-transform: uppercase;
+    gap: 36px;
+    color: rgba(5, 254, 198, 1);
+    align-items: center;
+    flex-direction: row;
+    row-gap: 0;
+  }
+  .lucky-why-title {
+    font-family: IBM Plex Sans;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: bottom;
+    text-transform: uppercase;
+
+    text-align: center;
+    vertical-align: bottom;
+    display: flex;
+
+    gap: 14px;
+  }
+  .lucky-why-title-div img {
+    width: 105px;
+    height: 105px;
+  }
+  .lucky-why-text-bold {
+    font-family: IBM Plex Sans;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+    padding: 48px 0 36px;
+  }
+  .lucky-why-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 529px;
+  }
+
+  .lucky-why-item {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+  }
+
+  .lucky-why-text {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    width: 529px;
+    padding-top: 24px;
   }
 }
 
-.class-uniqueness {
+.lucky-uniqueness {
   width: 375px;
-  height: 868px;
+  height: 1307px;
   margin: auto;
-  padding: 64px 16px 0;
+  padding: 32px 20px 0;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: url("/img");
+  background-image: url("/img/uniqueness/The\ Uniqueness\ of\ the\ Game.png");
 }
 
-.class-uniqueness-list {
-  padding-top: px;
+.lucky-uniqueness-list {
+  padding-top: 36px;
   display: flex;
   flex-direction: column;
-  gap: px;
+  gap: 20px;
 }
 
-.class-uniqueness-text-bold {
-}
-
-.class-uniqueness-text {
-}
-
-@media screen and (min-width: 1200px) {
-  .class-uniqueness {
-    width: 1440px;
-    height: 700px;
-    padding: 72px 408px 0;
-    background-image: url("/img");
-  }
-}
-.class-about {
-  padding: 64px 16px 0px;
-  margin: auto;
-  width: 375px;
-  height: 574px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: url("/img");
-}
-
-.class-about-title {
-  -webkit-text-stroke: 1px#FFFFFF99;
-  color: #297d17;
-}
-
-.class-about-text {
-}
-
-.class-about-text-bold {
+.lucky-uniqueness-item {
+  display: flex;
+  align-items: start;
+  gap: 16px;
+  border-radius: 10px;
+  padding: 24px;
+  border: 2px solid rgba(5, 254, 198, 1);
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  vertical-align: middle;
 }
 
 @media screen and (min-width: 1200px) {
-  .class-about {
-    padding: 66px 408px 0;
+  .lucky-uniqueness {
     width: 1440px;
-    height: px;
-    background-image: url("/img");
+    height: 1010px;
+    padding: 90px 730px 0 72px;
+    background-image: url("/img/uniqueness/The\ Uniqueness\ of\ the\ Game\ \(1\).png");
+  }
+  .lucky-uniqueness-list {
+    padding-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .lucky-uniqueness-item {
+    width: 638px;
+    height: 102px;
+    border-radius: 10px;
+    padding: 24px;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
   }
 }
-.class-how {
-  width: 375px;
-  height: px;
+.lucky-about {
+  padding: 32px 20px 0px;
   margin: auto;
-  padding: 64px 16px 0;
+  width: 375px;
+  height: 973px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: url("/img");
-}
-
-.class-how-list {
-  padding-top: px;
+  background-image: url("/img/About\ This\ Game.png");
   display: flex;
   flex-direction: column;
-  gap: px;
-}
-
-.class-how-item {
-}
-
-.class-how-img {
-  margin: auto;
-}
-
-.class-how-text-bold {
-}
-
-.class-how-text {
-}
-
-@media screen and (min-width: 1200px) {
-  .class-how {
-    width: 1440px;
-    height: px;
-    padding: px;
-    background-image: url("/img");
-  }
-}
-
-.class-characters {
-  padding: 0px 16px;
-  margin: auto;
-  width: 375px;
-  height: px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: url("/img");
-}
-
-.class-characters-list {
-  display: flex;
-  flex-direction: column;
-  padding-top: px;
-  gap: px;
-}
-
-.class-characters-text-bold {
-}
-
-.class-characters-text {
-}
-
-@media screen and (min-width: 1200px) {
-  .class-characters {
-    padding: ;
-    width: 1440px;
-    height: px;
-    background-image: url("/img");
-  }
-}
-
-.class-reviews {
-  width: 375px;
-  height: px;
-  margin: auto;
-  padding: 0px 16px 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-  background-image: url("/img");
-}
-
-.class-reviews-list {
-  padding: 0;
-}
-
-.class-reviews-item {
-  margin: 0 5px;
-}
-
-.class-reviews-item-top {
-  display: flex;
-  gap: px;
+  gap: 36px;
   align-items: center;
 }
 
-.class-reviews-text-bold {
+.lucky-about-title {
+  font-family: IBM Plex Sans;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: bottom;
+  color: rgba(5, 254, 198, 1);
 }
 
-.class-reviews-text {
-}
-
-.class-gallery-button-container {
-  display: none;
+.lucky-about-text {
+  font-family: IBM Plex Sans;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
 }
 
 @media screen and (min-width: 1200px) {
-  .class-gallery-button-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
-  }
-
-  .class-gallery-button {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    -webkit-transition: scale 0.3s ease;
-    transition: scale 0.3s ease;
-  }
-
-  .class-gallery-button:hover {
-    scale: 120%;
-  }
-
-  .class-reviews {
+  .lucky-about {
+    padding: 90px 72px 0 730px;
     width: 1440px;
-    height: px;
-    padding: ;
-    background-image: url("/img");
+    height: 632px;
+    gap: 48px;
+    align-items: start;
+    background-image: url("/img/About\ This\ Game\ \(1\).png");
+  }
+  .lucky-about-title {
+    font-family: IBM Plex Sans;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: bottom;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .lucky-about-text {
+    font-family: IBM Plex Sans;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
   }
 }
-
-.class-faq {
-  padding: 0px 16px 0px;
-  margin: auto;
+.lucky-how {
   width: 375px;
-  min-height: px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  background-image: url("/img");
+  margin: auto;
+  padding: 32px 20px;
+  background: rgba(5, 6, 6, 1);
 }
 
-.class-faq-container {
-  padding-top: px;
+.lucky-how-list {
+  padding-top: 36px;
   display: flex;
   flex-direction: column;
-  gap: px;
+  gap: 20px;
+}
+
+.lucky-how-item {
+  gap: 16px;
+  border-radius: 10px;
+  padding: 24px;
+  border: 2px solid rgba(5, 254, 198, 1);
+  display: flex;
+  align-items: start;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 1200px) {
+  .lucky-how {
+    width: 1440px;
+    padding: 90px 72px;
+  }
+  .lucky-how-list {
+    padding-top: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 52px;
+  }
+
+  .lucky-how-item {
+    width: 397px;
+    height: 129px;
+    gap: 16px;
+    border-radius: 10px;
+    padding: 24px;
+
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+  }
+}
+
+.lucky-reviews {
+  width: 375px;
   margin: auto;
+  padding: 32px 20px;
 }
 
-.class-faq-item {
+.lucky-reviews-list {
+  padding-top: 36px;
 }
 
-.class-faq-question {
+.lucky-reviews-item {
+  margin: 0 5px;
+  width: 309px;
+  height: 230px;
+  padding-top: 64px;
+  padding-right: 16px;
+  padding-bottom: 24px;
+  padding-left: 16px;
+  border: 2px solid rgba(46, 252, 169, 1);
+  border-radius: 10px;
+  margin-top: 50px;
+
+  position: relative;
+}
+
+.lucky-reviews-img {
+  position: absolute;
+  top: -50px;
+  left: 101px;
+}
+
+.lucky-reviews-text-bold {
+  font-family: IBM Plex Sans;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px 0 16px;
+}
+
+.lucky-reviews-text {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+.slick-prev:before {
+  content: url("/img/reviews/button\ \(1\).png");
+  display: flex;
+  margin-left: 20px;
+}
+.slick-next {
+  right: 0px;
+  display: none;
+}
+.slick-next:before {
+  content: url("/img/reviews/button\ \(4\).png");
+  display: flex;
+  margin-left: -20px;
+}
+@media screen and (min-width: 1200px) {
+  .lucky-reviews {
+    width: 1440px;
+    padding: 90px 76px;
+  }
+  .lucky-reviews-list {
+    padding-top: 48px;
+  }
+
+  .lucky-reviews-item {
+    margin: 0 10px;
+    width: 309px;
+    height: 230px;
+    padding-top: 64px;
+    padding-right: 16px;
+    padding-bottom: 24px;
+    padding-left: 16px;
+    border: 2px solid rgba(46, 252, 169, 1);
+    border-radius: 10px;
+    margin-top: 50px;
+
+    position: relative;
+  }
+
+  .slick-prev:before {
+    content: url("/img/reviews/button\ \(1\).png");
+    display: flex;
+    margin-left: 20px;
+  }
+  .slick-next {
+    right: 0px;
+    display: none;
+  }
+  .slick-next:before {
+    content: url("/img/reviews/button\ \(4\).png");
+    display: flex;
+    margin-left: -20px;
+  }
+}
+
+.lucky-faq {
+  padding: 32px 20px;
+  margin: auto;
+  width: 375px;
+
+  background-image: url("/img/FAQ.png");
+}
+
+.lucky-faq-container {
+  padding-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+}
+
+.lucky-faq-item {
+  background: rgba(30, 192, 116, 1);
+  padding: 8px 12px;
+  border: 2px solid rgba(46, 252, 169, 1);
+  border-radius: 10px;
+}
+
+.lucky-faq-question {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: IBM Plex Sans;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
 }
 
-.class-toggle-button {
+.lucky-toggle-button {
   background: none;
   border: none;
   cursor: pointer;
 }
 
-.class-faq-answer {
+.lucky-faq-answer {
   display: none;
-  padding-top: 16px;
+  padding-top: 12px;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+.lucky-active {
+  border: 4px solid rgba(204, 215, 245, 1);
+  background-color: transparent;
 }
 
 @media screen and (min-width: 1200px) {
-  .class-faq {
-    padding: ;
+  .lucky-faq {
+    padding: 90px 418px;
     width: 1440px;
-    background-image: url("/img");
+    background-image: url("/img/FAQ\ \(1\).png");
+  }
+  .lucky-faq-title {
+    text-align: center;
+  }
+  .lucky-faq-container {
+    padding-top: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+  }
+
+  .lucky-faq-item {
+    background: rgba(30, 192, 116, 1);
+    padding: 8px 12px;
+    border: 2px solid rgba(46, 252, 169, 1);
+    border-radius: 10px;
+  }
+
+  .lucky-faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: IBM Plex Sans;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;
+  }
+
+  .lucky-toggle-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .lucky-faq-answer {
+    display: none;
+    padding-top: 12px;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;
+  }
+  .lucky-active {
+    border: 4px solid rgba(204, 215, 245, 1);
+    background-color: transparent;
   }
 }
-.class-gallery {
+
+.lucky-features {
   width: 375px;
-  height: px;
+  height: 1131px;
   margin: auto;
-  padding: px 16px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: url("/img");
+  padding: 32px 20px 0px;
+  background-image: url("/img/features/Key\ Features.png");
 }
 
-.class-gallery-list {
-  width: auto;
-  padding-top: 65px;
-  margin: auto;
-}
-
-.class-gallery-item {
-  width: 343px;
-  height: 610px;
-  margin: 0 10px;
-  overflow: hidden;
-  position: relative;
-  margin: 0 10px;
-}
-
-.class-gallery-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-@media screen and (min-width: 1200px) {
-  .class-gallery {
-    width: 1440px;
-    height: px;
-    padding: 72px 0 0;
-    background-image: url("/img");
-  }
-
-  .class-gallery-item {
-    width: 406px;
-    height: 721.78px;
-    margin: 0 10px;
-  }
-
-  .class-gallery-list {
-    padding: 82px 0 42px;
-  }
-}
-
-.class-features {
-  width: 375px;
-  margin: auto;
-  padding: 64px 16px 89px;
-}
-
-.class-features-list {
-  padding-top: 64px;
+.lucky-features-list {
+  padding-top: 36px;
   display: flex;
   flex-direction: column;
+  gap: 20px;
+}
+
+.lucky-features-item {
+  width: 335px;
+  height: 111px;
   gap: 16px;
-}
-
-.class-features-item {
-  width: 163px;
-  height: 230px;
-  margin: auto;
-}
-
-.class-features-img {
-}
-
-.class-features-text-bold {
-}
-
-.class-features-text {
+  border-radius: 10px;
+  padding: 24px;
+  border: 2px solid rgba(5, 254, 198, 1);
+  display: flex;
+  align-items: start;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  vertical-align: middle;
 }
 
 @media screen and (min-width: 1200px) {
-  .class-features {
+  .lucky-features {
     width: 1440px;
-    padding: ;
+    height: 1036px;
+    padding: 90px 72px 0;
+    background-image: url("/img/features/Key\ Features\ \(1\).png");
+  }
+  .lucky-features-list {
+    padding-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .lucky-features-item {
+    width: 748px;
+    height: 102px;
+    gap: 16px;
+    border-radius: 10px;
+    padding: 24px;
+
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    align-items: center;
   }
 }
 
-.class-policy-terms-container {
-  padding: 124px 16px 116px;
+.lucky-policy-terms-container {
+  padding: 96px 20px 40px;
   width: 375px;
   margin: auto;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0%;
 }
 
-.class-policy-terms-title {
-  text-transform: uppercase;
+.lucky-policy-terms-title {
+  font-family: IBM Plex Sans;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0%;
 }
 
-.class-policy-terms-text {
+.lucky-policy-terms-text {
+  font-family: IBM Plex Sans;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0%;
+
   padding-top: 20px;
 }
 
-.class-policy-terms-texts {
+.lucky-policy-terms-texts {
   padding-top: 8px;
 }
 
-.class-policy-terms-text-one {
+.lucky-policy-terms-text-one {
   padding-top: 20px;
 }
 
-.class-terms-list {
+.lucky-terms-list {
   list-style-type: disc;
   padding: 20px 0 20px 25px;
   display: flex;
   flex-direction: column;
 }
 
-.class-terms-lists {
+.lucky-terms-lists {
   list-style-type: disc;
   padding-left: 25px;
 }
 
-.class-email-link {
+.lucky-email-link {
   color: inherit;
   text-decoration: none;
 }
 
-.class-email-link-color {
+.lucky-email-link-color {
   color: inherit;
   text-decoration: none;
 }
 
 @media screen and (min-width: 1200px) {
-  .class-policy-terms-container {
-    padding: 186px 80px 116px;
+  .lucky-policy-terms-container {
+    padding: 166px 72px 50px;
     width: 1440px;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0%;
   }
 
-  .class-policy-terms-title {
+  .lucky-policy-terms-title {
+    font-family: IBM Plex Sans;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 150%;
+    letter-spacing: 0%;
   }
 
-  .class-policy-terms-text {
+  .lucky-policy-terms-text {
     padding-top: 40px;
+    font-family: IBM Plex Sans;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0%;
   }
 
-  .class-policy-terms-text-one {
+  .lucky-policy-terms-text-one {
     padding-top: 30px;
   }
 
-  .class-terms-list {
+  .lucky-terms-list {
     padding: 20px 0 20px 25px;
   }
 }
-.class-footer {
+.lucky-footer {
   width: 375px;
   margin: auto;
-  color: #ffffff;
-  padding: 58px 16px 49px;
+
+  background: rgba(5, 6, 6, 1);
+
+  padding: 32px 0px;
 }
 
-.class-footer-container {
+.lucky-footer-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
 }
 
-.class-footer-wrapper {
+.lucky-footer-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 16px;
 }
 
-.class-footer-text {
+.lucky-footer-text {
   text-decoration: none;
-  color: #ffffff;
+  color: rgba(244, 244, 244, 1);
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
 }
 
-.class-footer-copyright {
+.lucky-footer-copyright {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
 }
 
 @media screen and (min-width: 1200px) {
-  .class-footer {
+  .lucky-footer {
     width: 1440px;
-    padding: 48px 199px;
+    padding: 48px 72px;
   }
 
-  .class-footer-container {
+  .lucky-footer-container {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: end;
-    align-items: center;
-    gap: 160px;
+
+    justify-content: stretch;
+    align-items: stretch;
+    gap: 30px;
   }
 
-  .class-footer-wrapper {
+  .lucky-footer-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: end;
     align-items: end;
-    gap: 4px;
+    gap: 30px;
   }
 
-  .class-footer-text {
-    font-family: Lora;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 24px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-  }
-
-  .class-footer-copyright {
-    font-family: Lora;
-    font-size: 14px;
+  .lucky-footer-text {
+    font-family: Roboto;
     font-weight: 500;
-    line-height: 16px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .lucky-footer-copyright {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
   }
 }
 
-.class-cookie-popup {
+.lucky-cookie-popup {
   position: fixed;
   bottom: 10px;
   width: 375px;
-  padding: 30px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 1);
-  border: 1px solid rgba(149, 49, 133, 1);
-  box-shadow: 0px 14px 42px 0px rgba(8, 15, 52, 0.06);
+  padding: 30px 20px;
+  background: rgba(15, 15, 15, 1);
+
   z-index: 1000;
   display: none;
 }
 
-.class-cookie-popup-text-two {
-  text-align: left;
-  color: rgba(87, 78, 68, 1);
+.lucky-cookie-popup-text-two {
+  font-family: IBM Plex Sans;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0%;
+
+  color: rgba(244, 244, 244, 1);
 }
 
-.class-cookie-button-container {
+.lucky-cookie-button-container {
   padding: 30px 0 0;
   margin: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 8px;
 }
 
-.class-cookie-button {
+.lucky-cookie-button {
   border: none;
   background-color: transparent;
+  width: 156px;
+  border-radius: 10px;
+
+  padding: 11px 0;
+  border: 2px solid rgba(204, 215, 245, 1);
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: rgba(244, 244, 244, 1);
 }
 
 #accept-cookies {
+  background: rgba(30, 192, 116, 1);
+  border: 2px solid rgba(46, 252, 169, 1);
 }
 
-.class-close-popup {
+.lucky-close-popup {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -858,36 +1229,27 @@ a {
 }
 
 @media screen and (min-width: 1200px) {
-  .class-cookie-popup-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .lucky-cookie-popup-text-two {
+    font-family: IBM Plex Sans;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 150%;
+    letter-spacing: 0%;
   }
 
-  .class-cookie-popup-text-two {
-    font-family: Raleway;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 30px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    width: 648px;
-  }
-
-  .class-cookie-button-container {
-    padding: 0;
+  .lucky-cookie-button-container {
     margin: auto;
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    justify-content: end;
+    gap: 48px;
   }
 
-  .class-cookie-popup {
+  .lucky-cookie-popup {
     position: fixed;
     bottom: 10px;
-    width: 1440px;
-    padding: 32px;
+    width: 902px;
+    padding: 72px;
     display: none;
   }
 }
